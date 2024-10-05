@@ -13,7 +13,7 @@ function generateChessboard() {
     chessboard.appendChild(createLabel(''));
     colLabels.forEach(label => {
         const cell = document.createElement('div');
-        cell.classList.add('label');
+        cell.classList.add('iav-label');
         cell.textContent = label;
         chessboard.appendChild(cell);
     });
@@ -21,13 +21,13 @@ function generateChessboard() {
 
     for (let row = 1; row <= rows; row++) {
         const rowLabelLeft = document.createElement('div');
-        rowLabelLeft.classList.add('label');
+        rowLabelLeft.classList.add('iav-label');
         rowLabelLeft.textContent = rows - row + 1;
         chessboard.appendChild(rowLabelLeft);
 
         for (let col = 0; col < cols; col++) {
             const square = document.createElement('div');
-            square.classList.add('square', (row + col) % 2 === 0 ? 'light' : 'dark');
+            square.classList.add('iav-square', (row + col) % 2 === 0 ? 'iav-light' : 'iav-dark');
 
             if (pieces[row]) {
                 const img = document.createElement('img');
@@ -39,7 +39,7 @@ function generateChessboard() {
         }
 
         const rowLabelRight = document.createElement('div');
-        rowLabelRight.classList.add('label');
+        rowLabelRight.classList.add('iav-label');
         rowLabelRight.textContent = rows - row + 1;
         chessboard.appendChild(rowLabelRight);
     }
@@ -47,7 +47,7 @@ function generateChessboard() {
     chessboard.appendChild(createLabel(''));
     colLabels.forEach(label => {
         const cell = document.createElement('div');
-        cell.classList.add('label');
+        cell.classList.add('iav-label');
         cell.textContent = label;
         chessboard.appendChild(cell);
     });
@@ -56,7 +56,7 @@ function generateChessboard() {
 
 function createLabel(text) {
     const label = document.createElement('div');
-    label.classList.add('label');
+    label.classList.add('iav-label');
     label.textContent = text;
     return label;
 }

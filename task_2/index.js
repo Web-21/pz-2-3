@@ -1,6 +1,6 @@
 const button = document.getElementById('statusButton');
 
-const statuses = ['update', 'delete', 'pending'];
+const statuses = ['iav-update', 'iav-delete', 'iav-pending'];
 
 const labels = ['Update', 'Delete', 'Pending'];
 

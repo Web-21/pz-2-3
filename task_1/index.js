@@ -1,11 +1,11 @@
-document.querySelectorAll('#task1 .image-container a img').forEach(img => {
+document.querySelectorAll('#task1 .iav-image-container a img').forEach(img => {
     img.addEventListener('click', function (e) {
         e.preventDefault();
         alert(this.parentElement.href);
     });
 });
 
-document.querySelectorAll('#task2 .image-container img').forEach(img => {
+document.querySelectorAll('#task2 .iav-image-container img').forEach(img => {
     img.addEventListener('click', function (e) {
         e.preventDefault();
         let currentRotation = img.style.transform.match(/rotate\((\d+)deg\)/);
@@ -14,7 +14,7 @@ document.querySelectorAll('#task2 .image-container img').forEach(img => {
     });
 });
 
-document.querySelectorAll('#task3 a').forEach(link => {
+document.querySelectorAll('#task3 .iav-link-container a').forEach(link => {
     link.addEventListener('mouseover', function () {
         this.innerText += ` (${this.href})`;
     });
@@ -57,5 +57,4 @@ form.addEventListener('submit', function (e) {
                         Last Name: ${lastNameInput.value}<br>
                         Age: ${ageInput.value}`;
     }
-    
 });

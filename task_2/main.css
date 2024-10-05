@@ -8,16 +8,16 @@ button {
     transition: background-color 0.3s ease;
 }
 
-.update {
+.iav-update {
     background-color: #4CAF50; 
 }
 
-.delete {
+.iav-delete {
     background-color: #f44336;
     margin-left: 150px;
 }
 
-.pending {
+.iav-pending {
     background-color: #f0ad4e;
     margin-left: 300px;
 }

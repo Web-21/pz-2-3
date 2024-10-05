@@ -7,7 +7,7 @@
     gap: 0;
 }
 
-.square {
+.iav-square {
     width: 80px;
     height: 80px;
     display: flex;
@@ -15,15 +15,15 @@
     justify-content: center;
 }
 
-.dark {
+.iav-dark {
     background-color: #D18B47;
 }
 
-.light {
+.iav-light {
     background-color: #FFCE9E;
 }
 
-.label {
+.iav-label {
     font-weight: bolder;
     font-size: xx-large;
     text-align: center;
