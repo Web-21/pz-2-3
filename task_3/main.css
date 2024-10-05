@@ -1,0 +1,38 @@
+#chessboard {
+    display: grid;
+    place-content: center;
+    margin-top: 75px;
+    grid-template-columns: 80px repeat(8, 80px) 80px; 
+    grid-template-rows: 80px repeat(8, 80px) 80px;    
+    gap: 0;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark {
+    background-color: #D18B47;
+}
+
+.light {
+    background-color: #FFCE9E;
+}
+
+.label {
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+}

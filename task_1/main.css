@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.image-container {
+    display: flex;
+    gap: 10px;
+}
+
+img {
+    width: 200px;
+    height: 300px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+input.invalid {
+    border: 2px solid red;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#demo {
+    margin-top: 20px;
+    font-weight: bold;
+}

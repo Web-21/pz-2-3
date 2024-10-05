@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Task List</h1>
+
+    <section id="task1">
+        <h2>Task 1: Click Image to Alert href</h2>
+        <div class="image-container">
+            <a href="https://www.youtube.com"><img src="./img/image1.jpg" alt="Image 1"></a>
+            <a href="https://www.google.com.ua/?hl=uk"><img src="./img/image2.jpg" alt="Image 2"></a>
+            <a href="https://github.com/DexSus"><img src="./img/image3.jpg" alt="Image 3"></a>
+        </div>
+    </section>
+
+    <section id="task2">
+        <h2>Task 2: Right-Click to Rotate Image</h2>
+        <div class="image-container">
+            <img src="./img/image1.jpg" alt="Image 1">
+            <img src="./img/image2.jpg" alt="Image 2">
+            <img src="./img/image3.jpg" alt="Image 3">
+        </div>
+    </section>
+
+    <section id="task3">
+        <h2>Task 3: Hover to Add href to Link Text</h2>
+        <div class="link-container">
+            <a href="https://www.youtube.com">This is YouTube</a><br>
+            <a href="https://www.google.com.ua/?hl=uk">This is Google in Ukr</a><br>
+            <a href="https://github.com/DexSus">This is me :)</a>
+        </div>
+    </section>
+
+    <section id="task4">
+        <h2>Task 4: Form Validation</h2>
+        <form id="userForm">
+            <label for="firstName">First Name: </label>
+            <input type="text" id="firstName" name="firstName" maxlength="50"><br>
+
+            <label for="lastName">Last Name: </label>
+            <input type="text" id="lastName" name="lastName" maxlength="50"><br>
+
+            <label for="age">Age: </label>
+            <input type="text" id="age" name="age" maxlength="3"><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="demo"></div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
