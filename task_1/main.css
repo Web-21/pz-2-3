@@ -1,0 +1,44 @@
+.container{
+    width: 90vw;
+    height: 100vh;
+    margin: auto;
+}
+.container-img{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+}
+.container-text{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+}
+.img{
+    background-image: url("./img/img.jpg");
+    width: 200px;
+    height: 300px;
+}
+#facebook-link, #tg-link, #inst-link{
+    display: none;
+}
+.form-container{
+    width: 40%;
+    height: 250px;
+    margin: auto;
+    margin-bottom: 50px;
+    border: 3px solid black;
+}
+.form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 70%;
+    margin: auto;
+}
