@@ -1,0 +1,34 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.delete {
+    background-color: #e40d0d;
+    color: white;
+}
+.update {
+    background-color: #189ac9;
+    color: white;
+}
+.download {
+    background-color: #1cd23d;
+    color: white;
+}
+.save{
+    background-color: #d10a74;
+    color: white;
+}
+.create {
+    background-color: #732eb0;
+    color: white;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Task 1</title>
+  </head>
+  <body>
+    <div id="images">
+      <img src="img/fluffy-kitty.png" class="clickable" id="fluffy"/>
+      <img src="img/sad-kitty.jpg" class="clickable" id="sad"/>
+      <img src="img/shocked-kitty.png" class="clickable" id="shocked"/>
+    </div>
+    <div class="links">
+      <a
+        href="https://cdn.britannica.com/36/234736-050-4AC5B6D5/Scottish-fold-cat.jpg"
+        class="hover-link"
+        >Link 1</a
+      >
+      <a
+        href="https://www.memphisveterinaryspecialists.com/files/best-breeds-of-house-cats-memphis-vet-1-1.jpeg"
+        class="hover-link"
+        >Link 2</a
+      >
+      <a
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/800px-Cat_November_2010-1a.jpg"
+        class="hover-link"
+        >Link 3</a
+      >
+    </div>
+    <form id="user-form">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Age" required>
+        <button type="" id="submit">Submit</button>
+    </form>
+    <div id="demo"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
