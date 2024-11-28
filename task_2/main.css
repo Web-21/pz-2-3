@@ -1,0 +1,47 @@
+/* Загальний стиль */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Контейнер */
+.container {
+    text-align: center;
+}
+
+/* Кнопка за замовчуванням */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Статуси кнопки */
+.status-initial {
+    background-color: #3498db;
+}
+
+.status-processing {
+    background-color: #f39c12;
+}
+
+.status-success {
+    background-color: #2ecc71;
+}
+
+.status-error {
+    background-color: #e74c3c;
+}
