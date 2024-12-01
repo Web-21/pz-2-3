@@ -1,0 +1,71 @@
+/* Загальний стиль */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Контейнер шахової дошки */
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(9, 70px); 
+    border: 6px solid #1c2833; 
+    background: #d6eaf8; 
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Клітинки дошки */
+.cell {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1c2833;
+}
+
+/* Чорні клітинки */
+.cell.black {
+    background-color: #3b3b3b;
+    color: white;
+}
+
+/* Білі клітинки */
+.cell.white {
+    background-color: #fdfdfd;
+    color: black;
+}
+
+/* Лейбли (позначки рядків і колонок) */
+.label {
+    background-color: #1c2833; 
+    color: #ecf0f1;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #566573; 
+    font-size: 16px;
+}
+
+/* Зображення шахових фігур */
+.piece {
+    width: 60px;
+    height: 60px;
+    object-fit: contain; /* Фігура коректно вписується у клітинку */
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.4));
+    transition: transform 0.3s ease-in-out;
+}
+
+.piece:hover {
+    transform: scale(1.1); /* Збільшення при наведенні */
+}

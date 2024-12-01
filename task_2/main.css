@@ -1,0 +1,42 @@
+/* Загальний стиль */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+}
+
+/* Контейнер */
+.container {
+    text-align: center;
+}
+
+/* Кнопка */
+.button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Стани кнопки */
+.start {
+    background-color: #4caf50; /* Зелений */
+    color: white;
+}
+
+.processing {
+    background-color: #ff9800; /* Помаранчевий */
+    color: white;
+}
+
+.completed {
+    background-color: #f44336; /* Червоний */
+    color: white;
+}
