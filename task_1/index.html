@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PZ-2-3 Task 1</title>
+    <!-- Include stylesheets -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- ========================================================================== -->
+    <!-- MAIN CONTENT -->
+
+    <!-- TASK 1 -->
+    <p>* As a user, I want to see three images (200x300)px, and when I click on an image, I want to see an alert with its href. <br>  
+    * When I right-click on an image, I want it to rotate by 90 degrees.</p>
+    <div class="img-link">
+        <a href="https://www.youtube.com/watch?v=NOk6CP5_OcY" class="img-linka">
+            <img src="img1.jpg" alt="img1" data-href="https://www.youtube.com/watch?v=NOk6CP5_OcY">
+        </a>
+        <a href="https://www.youtube.com/watch?v=NOk6CP5_OcY" class="img-linka">
+            <img src="img2.jpg" alt="img2" data-href="https://www.youtube.com/watch?v=NOk6CP5_OcY">
+        </a>
+        <a href="https://www.youtube.com/watch?v=NOk6CP5_OcY" class="img-linka">
+            <img src="img3.jpg" alt="img3" data-href="https://www.youtube.com/watch?v=NOk6CP5_OcY">
+        </a>
+    </div>
+
+    <!-- TASK 2 -->
+    <p>* As a user, I want to see three links, and when I hover over a link, I want its href to be added to the end of the text in parentheses. <br>
+    * When I move the cursor away, I want the href to be removed from the text.</p>
+    <div class="just-links">
+        <a href="https://www.pinterest.com/pin/240520436341478191/">Beautiful girl</a>
+        <a href="https://www.pinterest.com/pin/240520436341478191/">One more</a>
+        <a href="https://www.youtube.com/shorts/ey_PxeMIn8g">Wait...la-la-la</a>
+    </div>
+
+    <!-- TASK 3 -->
+    <p>* As a user, I want to see a form with three inputs (First Name, Last Name, and Age) and a Submit button. <br> 
+    * When the form is valid, show a message in the block with the id="demo".</p>
+    <form id="userForm">
+        <input type="text" id="firstName" placeholder="First Name">
+        <input type="text" id="lastName" placeholder="Last Name">
+        <input type="text" id="age" placeholder="Age">
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="demo"></div>
+
+    <script src="index.js"></script>
+    <!-- ========================================================================== -->
+</body>
+</html>
