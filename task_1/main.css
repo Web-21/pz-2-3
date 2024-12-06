@@ -1,0 +1,40 @@
+.img-link {
+    display: flex;
+    gap: 20px;
+}
+
+img {
+    width: 200px;
+    height: 300px;
+    transition: transform 0.2s ease;
+}
+img.rotated {
+    transform: rotate(90deg);
+}
+
+a {
+    display: block;
+    margin: 10px 0;
+    color: blue;
+    text-decoration: none;
+}
+
+form {
+    margin: 20px 0;
+}
+input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 200px;
+}
+input.invalid {
+    border: 2px solid red;
+}
+
+/* Result Block */
+#demo {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
