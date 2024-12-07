@@ -1,0 +1,28 @@
+img {
+  width: 200px;
+  height: 300px;
+  transition: transform 0.3s;
+}
+input {
+  margin-bottom: 10px;
+  display: block;
+}
+input.invalid {
+  border: 2px solid red;
+}
+
+.disable{
+  display: none;
+}
+
+.enable{
+  display: block;
+}
+
+#formNotification{
+  text-align: center;
+}
+
+#formNotification p{
+  font-size: 20px;
+}
