@@ -1,0 +1,15 @@
+button{
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.update{
+  background-color: green;
+}
+.pending{
+  background-color: yellow;
+}
+.delete{
+  background-color: red;
+}
