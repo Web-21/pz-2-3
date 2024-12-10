@@ -3,51 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Web Page</title>
+    <title>Button with Changing Status</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
-    <div id="task1">
-        <div class="eam_img-cont">
-            <a href="https://www.youtube.com"><img src="./img/image.png" ></a>
-            <a href="https://www.google.com.ua/?hl=uk"><img src="./img/image2.png"></a>
-            <a href="https://cs-love.net"><img src="./img/image3.png"></a>
-        </div>
-    </div>
-
-    <div id="task2">
-        <div class="eam_img-cont">
-            <img src="./img/image.png" >
-            <img src="./img/image2.png">
-            <img src="./img/image3.png">
-        </div>
-    </div>
-
-    <div id="task3">
-        <div class="eam_link-cont">
-            <a href="https://www.youtube.com">Привіт</a><br>
-            <a href="https://www.google.com.ua/?hl=uk">Hello</a><br>
-            <a href="https://cs-love.net">Cs 1.6 </a><br>
-        </div>
-    </div>
-
-    <div id="task4">
-        <form id="userForm">
-            <label for="firstName">Ім'я</label>
-            <input type="text" id="firstName" name="firstName"><br>
-
-            <label for="lastName">Прізвище </label>
-            <input type="text" id="lastName" name="lastName" ><br>
-
-            <label for="age">Вік </label>
-            <input type="text" id="age" name="age" maxlength="3"><br>
-
-            <button type="submit">надіслати</button>
-        </form>
-
-        <div id="demo"></div>
-    </div>
+    <button id="statusButton" class="mov_status mov_update">Update</button>
 
     <script src="index.js"></script>
 </body>
