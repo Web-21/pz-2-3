@@ -1,64 +1,100 @@
+/* Загальні стилі для сторінки */
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
-    display: flex;
-    gap: 50px;
-}
-
-h1, h2 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-.eam_img-cont {
+/* Стилі для секції з ID */
+#task1, #task2, #task3, #task4 {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для зображень */
+.eam_img-cont img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ефект при наведенні на зображення */
+.eam_img-cont img:hover {
+    transform: scale(1.1);
+    border-color: #007bff;
+}
+
+/* Стилі для посилань */
+.eam_link-cont a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #007bff;
+    margin: 5px 0;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.eam_link-cont a:hover {
+    color: #0056b3;
+}
+
+/* Стилі для форми */
+form#userForm {
     display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
-img {
-    width: 200px;
-    height: 300px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+form#userForm label {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.eam_link-cont {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+form#userForm input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
-a {
-    color: blueviolet;
-    text-decoration: none;
+form#userForm input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-input {
-    margin-bottom: 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
-}
-
-input.invalid {
-    border: 2px solid red;
-}
-
-button {
-    padding: 8px 15px;
-    background-color: #4CAF50;
-    color: white;
+form#userForm button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #45a049;
+form#userForm button:hover {
+    background-color: #0056b3;
 }
 
+/* Стилі для блоку результату */
 #demo {
     margin-top: 20px;
-    font-weight: bold;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px dashed #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #555;
 }
