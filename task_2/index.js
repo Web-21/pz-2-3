@@ -1,16 +1,22 @@
-const button = document.getElementById('statusButton');
+const controlButton = document.getElementById('statusButton');
 
-const states = [
-    { className: 'mov_update', label: 'Update' },
-    { className: 'mov_delete', label: 'Delete' },
-    { className: 'mov_pending', label: 'Pending' }
+const statuses = [
+    { cssClass: 'mov_update', displayText: 'Update' },
+    { cssClass: 'mov_delete', displayText: 'Delete' },
+    { cssClass: 'mov_pending', displayText: 'Pending' }
 ];
 
-let currentIndex = 0;
+let position = 0;
 
-button.addEventListener('click', () => {
-    states.forEach(state => button.classList.remove(state.className));
-    currentIndex = (currentIndex + 1) % states.length;
-    button.classList.add(states[currentIndex].className);
-    button.textContent = states[currentIndex].label;
+controlButton.addEventListener('click', () => {
+    
+    for (const item of statuses) {
+        controlButton.classList.remove(item.cssClass);
+    }
+    
+    position = (position + 1) % statuses.length;
+    
+   
+    controlButton.classList.add(statuses[position].cssClass);
+    controlButton.textContent = statuses[position].displayText;
 });

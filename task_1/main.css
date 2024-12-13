@@ -1,60 +1,83 @@
 body {
     font-family: 'Arial', sans-serif;
-    padding: 20px;
+    padding: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
-    background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+    background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
     color: #333;
+    margin: 0;
 }
 
 h1, h2 {
     color: #222;
     text-align: center;
+    width: 100%;
+    margin-top: 0;
+    font-weight: normal;
 }
 
+/* Галерея изображений (Task 1) */
 .MOV_img-cont {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    background: #ffffffc7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-img {
-    width: 220px;
-    height: 330px;
+.MOV_img-cont img {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
-img:hover {
+.MOV_img-cont img:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Блок со ссылками (Task 3) */
 .MOV_link-cont {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    background: #ffffffc7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 300px;
+    width: 100%;
 }
 
-a {
-    color: #6a5acd;
+.MOV_link-cont a {
+    display: inline-block;
+    color: #1565c0;
     font-size: 1.1rem;
     font-weight: 500;
     text-decoration: none;
     transition: color 0.3s ease;
+    /* Чтобы при добавлении текста (href) ссылка не "скакала":
+       Зарезервируем место под текст */
+    min-width: 200px;
+    white-space: nowrap;
 }
 
-a:hover {
-    color: #483d8b;
+.MOV_link-cont a:hover {
+    color: #0d47a1;
     text-decoration: underline;
 }
 
+/* Поля ввода и форма */
 input {
     margin-bottom: 15px;
     padding: 10px;
@@ -63,13 +86,14 @@ input {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
     transition: border 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;
 }
 
 input:focus {
-    border-color: #4caf50;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    border-color: #29b6f6;
+    box-shadow: 0 0 5px rgba(41, 182, 246, 0.5);
 }
 
 input.invalid {
@@ -77,20 +101,22 @@ input.invalid {
     box-shadow: 0 0 5px rgba(244, 67, 54, 0.5);
 }
 
+/* Кнопка */
 button {
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: #4caf50;
+    background-color: #29b6f6;
     color: white;
     border: none;
     border-radius: 5px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Arial', sans-serif;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #1e88e5;
     transform: translateY(-2px);
 }
 
@@ -99,10 +125,17 @@ button:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Блок результата */
 #demo {
     margin-top: 20px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #333;
     text-align: center;
+    background: #ffffffc7;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
