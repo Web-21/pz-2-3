@@ -1,68 +1,57 @@
-let images1 = document.querySelectorAll('#task1 .MOV_img-cont a img');
-for (let i = 0; i < images1.length; i++) {
-    images1[i].onclick = function (event) {
-        event.preventDefault();
-        alert(images1[i].parentNode.href);
-    };
-}
+// Task 1: Клик по изображениям и показ ссылки
+document.querySelectorAll('#task1 .MOV_img-cont a img').forEach(imgElem => {
+    imgElem.addEventListener('click', evt => {
+        evt.preventDefault();
+        alert(imgElem.parentNode.href);
+    });
+});
 
-let images2 = document.querySelectorAll('#task2 .MOV_img-cont img');
-for (let i = 0; i < images2.length; i++) {
-    images2[i].onclick = function (event) {
-        event.preventDefault();
-        let rotation = images2[i].style.transform;
-        let angle = 90;
-        if (rotation.includes('rotate')) {
-            let currentAngle = parseInt(rotation.replace(/[^\d]/g, ''));
-            angle = currentAngle + 90;
+// Task 2: Поворот изображений при клике
+document.querySelectorAll('#task2 .MOV_img-cont img').forEach(pic => {
+    pic.addEventListener('click', evt => {
+        evt.preventDefault();
+        const currentTransform = pic.style.transform;
+        let newAngle = 90;
+        if (currentTransform.includes('rotate')) {
+            const extractedAngle = parseInt(currentTransform.replace(/[^\d]/g, ''), 10);
+            newAngle = extractedAngle + 90;
         }
-        images2[i].style.transform = 'rotate(' + angle + 'deg)';
-    };
-}
+        pic.style.transform = `rotate(${newAngle}deg)`;
+    });
+});
 
-let links = document.querySelectorAll('#task3 .MOV_link-cont a');
-for (let i = 0; i < links.length; i++) {
-    links[i].onmouseover = function () {
-        links[i].innerHTML = links[i].innerHTML + ' (' + links[i].href + ')';
-    };
-    links[i].onmouseout = function () {
-        links[i].innerHTML = links[i].innerHTML.replace(' (' + links[i].href + ')', '');
-    };
-}
+// Task 3: При наведении на ссылку добавляем href, при уходе — убираем
+document.querySelectorAll('#task3 .MOV_link-cont a').forEach(linkEl => {
+    linkEl.addEventListener('mouseover', () => {
+        linkEl.textContent += ` (${linkEl.href})`;
+    });
+    linkEl.addEventListener('mouseout', () => {
+        linkEl.textContent = linkEl.textContent.replace(` (${linkEl.href})`, '');
+    });
+});
 
-let form = document.getElementById('userForm');
-let firstName = document.getElementById('firstName');
-let lastName = document.getElementById('lastName');
-let age = document.getElementById('age');
-let demo = document.getElementById('demo');
+// Task 4: Проверка формы и вывод результата
+const userForm = document.getElementById('userForm');
+const fNameField = document.getElementById('firstName');
+const lNameField = document.getElementById('lastName');
+const ageField   = document.getElementById('age');
+const outputDemo = document.getElementById('demo');
 
-form.onsubmit = function (event) {
+userForm.addEventListener('submit', event => {
     event.preventDefault();
 
-    let namePattern = /^[a-zA-Z]+$/;
-    let agePattern = /^[0-9]+$/;
+    const validName = /^[a-zA-Z]+$/;
+    const validAge  = /^[0-9]+$/;
 
-    if (!namePattern.test(firstName.value)) {
-        firstName.style.border = '1px solid red';
-    } else {
-        firstName.style.border = '';
-    }
+    // Проверка имени
+    fNameField.style.border = validName.test(fNameField.value) ? '' : '1px solid red';
+    // Проверка фамилии
+    lNameField.style.border = validName.test(lNameField.value) ? '' : '1px solid red';
+    // Проверка возраста
+    ageField.style.border = validAge.test(ageField.value) ? '' : '1px solid red';
 
-    if (!namePattern.test(lastName.value)) {
-        lastName.style.border = '1px solid red';
-    } else {
-        lastName.style.border = '';
+    // Если все данные корректны — выводим информацию
+    if (validName.test(fNameField.value) && validName.test(lNameField.value) && validAge.test(ageField.value)) {
+        outputDemo.innerHTML = `Імя: ${fNameField.value}<br>Прізвище: ${lNameField.value}<br>Вік: ${ageField.value}`;
     }
-
-    if (!agePattern.test(age.value)) {
-        age.style.border = '1px solid red';
-    } else {
-        age.style.border = '';
-    }
-
-    if (namePattern.test(firstName.value) && namePattern.test(lastName.value) && agePattern.test(age.value)) {
-        demo.innerHTML = 'Імя: ' + firstName.value + '<br>' +
-                         'Прізвище: ' + lastName.value + '<br>' +
-                         'Вік: ' + age.value;
-    }
-};
+});
